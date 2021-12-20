@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Flecha.png-e2a55c5e48133c1bdfdcf283dd403032.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Hackaton juego 2019/Sprites 2/Flecha.png"
+dest_files=[ "res://.import/Flecha.png-e2a55c5e48133c1bdfdcf283dd403032.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
