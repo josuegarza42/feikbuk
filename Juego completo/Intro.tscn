@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Intro.gd" type="Script" id=1]
+[ext_resource path="res://Tutorial.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/Pantalla Introduccion.png" type="Texture" id=3]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/Flecha.png" type="Texture" id=4]
+[ext_resource path="res://TextureButton.gd" type="Script" id=5]
+[ext_resource path="res://Pantalla_Feis.gd" type="Script" id=6]
+[ext_resource path="res://Hackaton juego 2019/feikbuk/Feisbuk Principal.jpg" type="Texture" id=7]
+
+[sub_resource type="PackedScene" id=1]
+_bundled = {
+"conn_count": 1,
+"conns": PoolIntArray( 2, 0, 12, 11, 2, 0 ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Node2D", "script", "TextureRect", "margin_right", "margin_bottom", "texture", "TextureButton", "margin_left", "margin_top", "rect_scale", "texture_normal", "_on_TextureButton_pressed", "pressed" ),
+"node_count": 3,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 0, 0, -1, 1, 1, 0, 0, 0, 0, 2, 2, -1, 3, 3, 1, 4, 1, 5, 2, 0, 0, 0, 6, 6, -1, 6, 7, 3, 8, 4, 3, 5, 4, 6, 9, 7, 10, 8, 0 ),
+"variants": [ ExtResource( 6 ), 40.0, ExtResource( 7 ), 611.814, 836.849, 1251.81, 1476.85, Vector2( 0.445867, 0.304279 ), ExtResource( 4 ) ],
+"version": 2
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+Tutorial = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+margin_left = 873.187
+margin_top = 547.571
+margin_right = 1513.19
+margin_bottom = 1187.57
+rect_scale = Vector2( 0.323381, 0.27623 )
+texture_normal = ExtResource( 4 )
+script = ExtResource( 5 )
+Tutorial = SubResource( 1 )
+[connection signal="pressed" from="TextureRect/TextureButton" to="." method="_on_TextureButton_pressed"]

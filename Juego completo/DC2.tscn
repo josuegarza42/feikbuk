@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://DC2.gd" type="Script" id=1]
+[ext_resource path="res://Decicion1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DON CACHONDO/2.png" type="Texture" id=3]
+[ext_resource path="res://DON CACHONDO/Flechon.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+Decicion1 = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="Decision" type="TextureButton" parent="TextureRect"]
+margin_left = 806.87
+margin_top = 512.621
+margin_right = 1446.87
+margin_bottom = 1152.62
+rect_scale = Vector2( 0.42555, 0.37701 )
+texture_normal = ExtResource( 4 )
+[connection signal="button_up" from="TextureRect/Decision" to="." method="_on_TextureButton_button_up"]

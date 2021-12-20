@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Intro.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/Fondo.png" type="Texture" id=2]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/LOGO NUEVO.png" type="Texture" id=3]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/Logo.png" type="Texture" id=4]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/press.png" type="Texture" id=5]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"tex
+# Called when the node enters the scene tree for the first time.
+
+export (PackedScene) var Intro
+
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+func _on_TextureButton_button_up():
+	get_tree().change_scene_to(Intro)
+
+"
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 1.22772, 0 )
+script = SubResource( 1 )
+Intro = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="Titulo" type="TextureRect" parent="TextureRect"]
+margin_left = -20.8715
+margin_top = 310.618
+margin_right = 1059.13
+margin_bottom = 1030.62
+rect_scale = Vector2( 1.045, 0.711363 )
+texture = ExtResource( 3 )
+
+[node name="Logo" type="TextureRect" parent="TextureRect"]
+margin_left = 319.212
+margin_top = -1.22773
+margin_right = 959.212
+margin_bottom = 638.772
+rect_scale = Vector2( 0.598285, 0.618945 )
+texture = ExtResource( 4 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 342.539
+margin_top = 240.637
+margin_right = 982.539
+margin_bottom = 880.637
+rect_scale = Vector2( 0.608622, 0.518653 )
+texture_normal = ExtResource( 5 )
+[connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]

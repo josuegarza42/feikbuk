@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Mensaje.gd" type="Script" id=1]
+[ext_resource path="res://Don_Cachondo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Hackaton juego 2019/feikbuk/Los tres Mensajes.jpg" type="Texture" id=3]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/Flecha.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+Don_Cachondo = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+margin_left = 743.949
+margin_top = 42.5642
+margin_right = 1383.95
+margin_bottom = 682.564
+rect_scale = Vector2( 0.121081, 0.113296 )
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+margin_left = 303.501
+margin_top = -22.2074
+margin_right = 943.501
+margin_bottom = 617.793
+rect_scale = Vector2( 0.689768, 0.358555 )
+texture = ExtResource( 4 )
+[connection signal="button_up" from="TextureRect/TextureButton" to="." method="_on_TextureButton_button_up"]

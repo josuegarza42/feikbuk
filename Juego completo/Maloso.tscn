@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Maloso.gd" type="Script" id=1]
+[ext_resource path="res://Y_Malo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DON CACHONDO/Final Malo 2.1.png" type="Texture" id=3]
+[ext_resource path="res://DON CACHONDO/Flechon.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+Y_Malo = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -5.55176
+margin_top = -1.85062
+margin_right = 1074.45
+margin_bottom = 718.149
+texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 762.455
+margin_top = 421.941
+margin_right = 1402.45
+margin_bottom = 1061.94
+rect_scale = Vector2( 0.399924, 0.397933 )
+texture_normal = ExtResource( 4 )
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

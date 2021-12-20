@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Decicion1.gd" type="Script" id=1]
+[ext_resource path="res://Bueno1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Malo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://DON CACHONDO/3.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+Bueno1 = ExtResource( 2 )
+Malo = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+
+[node name="Malo" type="TextureButton" parent="."]
+margin_left = 738.397
+margin_top = 16.6556
+margin_right = 1378.4
+margin_bottom = 656.656
+rect_scale = Vector2( 0.508753, 0.512582 )
+
+[node name="Bueno" type="TextureButton" parent="."]
+margin_left = 740.247
+margin_top = 375.675
+margin_right = 780.247
+margin_bottom = 415.675
+rect_scale = Vector2( 8.12048, 8.20588 )
+[connection signal="pressed" from="Malo" to="." method="_on_Malo_pressed"]
+[connection signal="pressed" from="Bueno" to="." method="_on_Bueno_pressed"]

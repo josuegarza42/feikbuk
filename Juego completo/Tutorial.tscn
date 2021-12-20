@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://Pantalla_Feis.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/Pantalla instrucciones.png" type="Texture" id=3]
+[ext_resource path="res://Hackaton juego 2019/Sprites 2/Flecha.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 0, 1.36035 )
+script = ExtResource( 1 )
+Pantalla_feis = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="Next-T" type="TextureButton" parent="TextureRect"]
+margin_left = 840.711
+margin_top = 516.942
+margin_right = 1480.71
+margin_bottom = 1156.94
+rect_scale = Vector2( 0.375866, 0.31083 )
+texture_normal = ExtResource( 4 )
+[connection signal="pressed" from="TextureRect/Next-T" to="." method="_on_NextT_pressed"]
